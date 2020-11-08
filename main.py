@@ -21,22 +21,19 @@ memo
 
 @app.route('/')
 def hello_world():
-    pi.set_servo_pulsewidth(servo_pin, 1450)
-    return render_template('hello.html', title='flask test', status=status)
+    return render_template('top.html', title='OSSL toppage', status=status)
 
 @app.route('/locking')
 def locking():
-    pi.set_servo_pulsewidth(servo_pin, 1450)
+    api_locking()
     #status = "lock"
     return status
 
 @app.route('/unlock')
 def unlock():
-    pi.set_servo_pulsewidth(servo_pin, 2350)
-    #status = "unlock"
+    api_unlock()
     time.sleep(second)
-    locking()
-    #status = "lock"
+    api_locking()
     return status
 
 #@app.route("/api/get/<key>", methods=["GET"])
@@ -44,13 +41,11 @@ def unlock():
 
 @app.route("/api/post/unlock", methods=["POST"])
 def api_unlock():
-    unlock()
-    return status
+    pi.set_servo_pulsewidth(servo_pin, 2350)
 
 @app.route("/api/post/locking", methods=["POST"])
 def api_locking():
-    locking()
-    return status
+    pi.set_servo_pulsewidth(servo_pin, 1450)
 
 if __name__ == '__main__':
     app.run("0.0.0.0")

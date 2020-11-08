@@ -15,13 +15,15 @@ Version 0.2
 
 ### `/status`
 現在のステータスを表示する
+未実装
 
 ### `/locking`
 鍵をかけ、ステータスを表示する
 
 ### `/unlock`
-鍵をあけ、ステータスを表示する
+鍵をあけ
 指定されてある秒数後、鍵をかける
+その後、ステータスを表示する
 
 ## 接続
 RaspberryPiのGPIO 4をSG92RのControlピンに接続。
@@ -36,4 +38,4 @@ RaspberryPiのGPIO 4をSG92RのControlピンに接続。
 `/api/post/locking`
 
 ## image
-![Untitled Diagram](https://user-images.githubusercontent.com/19991619/97961693-203e1800-1df7-11eb-9c40-95071fd7e8a4.jpg)
+![Untitled Diagram](https://user-images.githubusercontent.com/19991619/98459896-90c3ab00-21e2-11eb-93b9-511c50ef54f9.png)
