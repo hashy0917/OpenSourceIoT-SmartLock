@@ -26,15 +26,16 @@ def hello_world():
 @app.route('/locking')
 def locking():
     api_locking()
-    #status = "lock"
-    return status
+    status = "lock"
+    return render_template('top.html', title='OSSL toppage', status=status)
 
 @app.route('/unlock')
 def unlock():
     api_unlock()
-    time.sleep(second)
-    api_locking()
-    return status
+    #time.sleep(second)
+    #api_locking()
+    status="unlock"
+    return render_template('top.html', title='OSSL toppage', status=status)
 
 #@app.route("/api/get/<key>", methods=["GET"])
 #def api_get(key):
@@ -48,4 +49,5 @@ def api_locking():
     pi.set_servo_pulsewidth(servo_pin, 1450)
 
 if __name__ == '__main__':
+    app.debug = True
     app.run("0.0.0.0")

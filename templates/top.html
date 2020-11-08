@@ -2,10 +2,10 @@
 {% block content %}
 <h3>Hello</h3>
 現在、鍵は{{ status }}です。
-<form action="/api/post/unlock" method="POST">
+<form action="/unlock" method="GET">
 	<input type="submit" value="unlock">
 </form>
-<form action="/api/post/locking" method="POST">
+<form action="/locking" method="GET">
 	<input type="submit" value="lock">
 </form>
 {% endblock %}
