@@ -22,5 +22,9 @@
 鍵をあけ、ステータスを表示する
 指定されてある秒数後、鍵をかける
 
+## 接続
+RaspberryPiのGPIO 4をSG92RのControlピンに接続。
+残りはGNDと5Vに接続。
+
 ## image
 ![Untitled Diagram](https://user-images.githubusercontent.com/19991619/97961693-203e1800-1df7-11eb-9c40-95071fd7e8a4.jpg)
