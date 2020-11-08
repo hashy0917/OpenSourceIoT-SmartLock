@@ -28,8 +28,8 @@ def locking():
 @app.route('/unlock')
 def unlock():
     pi.set_servo_pulsewidth(servo_pin, 2350)
-    #time.sleep(second)
-    #locking()
+    time.sleep(second)
+    locking()
     return "unlock"
 
 if __name__ == '__main__':
